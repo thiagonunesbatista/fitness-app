@@ -13,9 +13,7 @@ a {
   text-decoration: none;
 }
 
-body {
-  ${({ theme: { colors } }) => ({
-    background: colors.primary
-  })}
+ul, ol, li {
+  list-style-position: inside;
 }
 `
