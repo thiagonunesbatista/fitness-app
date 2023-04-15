@@ -38,6 +38,5 @@ const CategoriesContainer = styled.div`
   width: 100%;
   max-width: 380px;
   margin: 0 auto;
-  padding: 0 20px;
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 80px);
 `

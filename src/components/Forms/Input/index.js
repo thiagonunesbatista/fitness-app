@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Input = ({ props }) => <StyledInput {...props} />
+export const Input = props => <StyledInput {...props} />
 
 const StyledInput = styled.input`
   border-radius: 10px;
@@ -8,4 +8,6 @@ const StyledInput = styled.input`
   height: 50px;
   display: flex;
   align-items: center;
+  padding: 0 20px;
+  outline: none;
 `

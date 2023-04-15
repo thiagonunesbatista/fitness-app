@@ -9,19 +9,23 @@ export const Category = ({ category: { link, name, description } }) => (
 )
 
 const StlyedCategory = styled(Link)`
-  background: #fff;
   border-radius: 10px;
   padding: 24px 20px;
-  color: #111;
   cursor: pointer;
   transition: all 0.3s linear;
-  border: 4px solid #fff;
+  border: 4px solid;
   height: fit-content;
   width: 100%;
 
+  ${({ theme: { colors } }) => ({
+    background: colors.primary,
+    borderColor: colors.primary
+  })}
+
   &:hover {
-    background: rgba(255, 255, 255, 0.5);
-    border-color: rgba(255, 255, 255, 0.75);
+    ${({ theme: { overlays } }) => ({
+      background: overlays.primary
+    })}
   }
 `
 

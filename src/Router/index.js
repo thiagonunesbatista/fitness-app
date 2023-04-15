@@ -1,15 +1,22 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Home, Login, Exercises } from '../pages'
+import { Diets, Exercises, Home, Login } from '../pages'
+import { Navbar } from '../components/Navbar'
+import { ContentContainer } from '../components/ContentContainer'
 
 export const Router = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/exercises' element={<Exercises />} />
-      </Routes>
+      <Navbar />
+
+      <ContentContainer>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/diets' element={<Diets />} />
+          <Route path='/exercises' element={<Exercises />} />
+        </Routes>
+      </ContentContainer>
     </BrowserRouter>
   )
 }
