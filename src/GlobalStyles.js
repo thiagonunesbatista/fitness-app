@@ -6,12 +6,11 @@ export const GlobalStyles = createGlobalStyle`
   padding: 0;
   margin: 0;
   font-family: 'Sofia Sans', sans-serif;
+  color: #111;
 }
 
-body {
-  ${({ theme: { colors } }) => ({
-    background: colors.primary
-  })}
+a {
+  text-decoration: none;
 }
   
 `
