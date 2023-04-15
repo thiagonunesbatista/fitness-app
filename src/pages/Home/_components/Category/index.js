@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export const Category = ({ category: { name, description } }) => (
-  <StlyedCategory>
+export const Category = ({ category: { link, name, description } }) => (
+  <StlyedCategory to={link}>
     <CategoryName>{name}</CategoryName>
     <CategoryDescription>{description}</CategoryDescription>
   </StlyedCategory>
 )
 
-const StlyedCategory = styled.div`
+const StlyedCategory = styled(Link)`
   background: #fff;
   border-radius: 10px;
   padding: 24px 20px;
@@ -15,6 +16,8 @@ const StlyedCategory = styled.div`
   cursor: pointer;
   transition: all 0.3s linear;
   border: 4px solid #fff;
+  height: fit-content;
+  width: 100%;
 
   &:hover {
     background: rgba(255, 255, 255, 0.5);

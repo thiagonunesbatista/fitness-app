@@ -14,8 +14,8 @@ a {
 }
 
 body {
-    ${({ theme: { colors } }) => ({
-      background: colors.primary
-    })}
-  }
+  ${({ theme: { colors } }) => ({
+    background: colors.primary
+  })}
+}
 `

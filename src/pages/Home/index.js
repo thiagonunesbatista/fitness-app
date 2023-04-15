@@ -1,40 +1,43 @@
 import styled from 'styled-components'
 
-import { ContentContainer } from '../../components/ContentContainer'
-import { Category } from '../../components/Category'
+import { Category } from './_components'
 
 const categories = [
   {
     name: 'Iniciante',
-    description: 'começando agora na academia'
+    description: 'começando agora na academia',
+    link: '/exercises'
   },
   {
     name: 'Intermediário',
-    description: 'conheço vários exercícios'
+    description: 'conheço vários exercícios',
+    link: '/exercises'
   },
   {
     name: 'Avançado',
-    description: 'querendo aprender novas variações'
+    description: 'querendo aprender novas variações',
+    link: '/exercises'
   }
 ]
 
 export const Home = () => {
   return (
-    <ContentContainer>
-      <CategoriesContainer>
-        {categories.map((currentCategory, index) => (
-          <Category category={currentCategory} key={index} />
-        ))}
-      </CategoriesContainer>
-    </ContentContainer>
+    <CategoriesContainer>
+      {categories.map((currentCategory, index) => (
+        <Category category={currentCategory} key={index} />
+      ))}
+    </CategoriesContainer>
   )
 }
 
 const CategoriesContainer = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 30px;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   max-width: 380px;
   margin: 0 auto;
+  padding: 0 20px;
+  min-height: calc(100vh - 70px);
 `
