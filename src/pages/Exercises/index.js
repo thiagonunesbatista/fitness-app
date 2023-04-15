@@ -13,10 +13,8 @@ const StyledExercises = styled.form`
   align-items: center;
   max-width: 576px;
   margin: auto;
-  
+
   svg {
     width: 5000px;
   }
 `
-
-
